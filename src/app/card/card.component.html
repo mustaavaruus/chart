@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let card of settingsCards; let i = index" 
+    [ngStyle]="{'background-color': card.color}">
+        <div>{{i}}</div>
+        <p>Type: {{card.line}}</p>
+        <div class="button-wrapper">
+        <button>Close</button>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,14 @@
+<div class="calculator-main-wrapper">
+    <div class="control-container"> 
+        <input (change)="getResult()" [(ngModel)]="input1" class="calculator-input">
+        <input (change)="getResult()" [(ngModel)]="input2" class="calculator-input">
+    </div>
+    <div class="control-container"> 
+        <button (click)="buttonClick('+')">sum</button>
+        <button (click)="buttonClick('-')">sub</button>
+        <br/>
+        <button (click)="buttonClick('*')">mult</button>
+        <button (click)="buttonClick('/')">div</button>
+    </div>
+    <div class="result">Result: {{result}}</div>
+</div>

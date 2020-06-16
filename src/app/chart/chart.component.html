@@ -1,0 +1,33 @@
+<div class="chart-container">
+    <h2>{{chart.name}}</h2>
+    <div class="settings-wrapper">
+    </div>
+    
+    <select [(ngModel)]="selectedValue" style="width: 150px;height: 30px;">
+        <option *ngFor="let col of customColors" [value]="col.id">
+            {{col.colorName}}
+        </option>
+    </select>
+    <select [(ngModel)]="selectedValueType" style="width: 150px;height: 30px;">
+        <option *ngFor="let line of customLineTypes" [value]="line.id">
+            {{line.lineType}}
+        </option>
+    </select>
+    <button (click)="applySettings()" style="width: 150px;height: 30px;">Settings</button>
+    <div class="chart-canvas-wrapper">
+        <canvas class="myChart"></canvas>
+        
+    </div>
+    <br/>
+    <select [(ngModel)]="leftBorder" style="width: 150px;height: 30px;">
+        <option *ngFor="let month of customMonths" [value]="month.id">
+            {{month.name}}
+        </option>
+    </select>
+    <select [(ngModel)]="rightBorder" style="width: 150px;height: 30px;">
+        <option *ngFor="let month of customMonths" [value]="month.id">
+            {{month.name}}
+        </option>
+    </select>
+    <button (click)="applyFilter()" style="width: 150px;height: 30px;">Filter</button>
+</div>
